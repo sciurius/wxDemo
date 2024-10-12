@@ -176,7 +176,9 @@ sub new {
     $nb->AddPage( $code, "Source", 0 );
 
     $split1->SplitVertically( $left_nb, $split2, 250 );
+    $split1->SetSashGravity( 0.2 );
     $split2->SplitHorizontally( $nb, $text, 300 );
+    $split2->SetSashGravity( 0.2 );
 
     $self->{tree}          = $tree;
     $self->{widget_tree}   = $widget_tree;
