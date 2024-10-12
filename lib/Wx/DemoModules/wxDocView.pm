@@ -37,7 +37,7 @@ sub new {
     my( $class, $parent ) = @_;
 
     # Create a document manager and load a document template
-    my $manager = Wx::DemoModules::wxDocView::DocManager->new( wxDOC_MDI );
+    my $manager = Wx::DemoModules::wxDocView::DocManager->new;
     Wx::DocTemplate->new( $manager, "Text Files",
                           "*.txt", "", "txt", "Text Document",
                           "Text View",
