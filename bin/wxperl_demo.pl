@@ -35,7 +35,7 @@ GetOptions( 'show=s'   => \( my $module ),
 usage() if $help;
 
 my $app    = Wx::SimpleApp->new;
-my $locale = Wx::Locale->new( Wx::Locale::GetSystemLanguage );
+# my $locale = Wx::Locale->new( Wx::Locale::GetSystemLanguage );
 my $demo   = Wx::Demo->new;
 
 $demo->activate_module( $module ) if $module;
