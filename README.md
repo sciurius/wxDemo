@@ -24,7 +24,7 @@ The demo program will be installed and executable with
 
 To run the demo without installing:
 
-`    perl bin/wxperl-demo.pl`
+`    perl -Mlib=lib bin/wxperl-demo.pl`
 
 # SUPPORT AND DOCUMENTATION
 

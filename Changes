@@ -1,7 +1,8 @@
 Revision history for Perl application Wx::Demo.
 
-0.23  TBR
+0.23  2024-10-12
 
+    - Release 0.23.
     - Remove wxDOC_MDI from wxDocView.pm. It is no longer used and
       doesn't exist in wxPerl.
     - Remove setting locale from wxperl-demo. It crashes on some platforms.
