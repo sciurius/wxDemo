@@ -1,5 +1,9 @@
 Revision history for Perl application Wx::Demo.
 
+0.00
+
+    - Fix RT #66014: Document wxperl_demo.pl in Wx::Demo.
+
 0.23  2024-10-12
 
     - Release 0.23.

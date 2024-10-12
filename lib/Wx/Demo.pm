@@ -16,6 +16,12 @@ package Wx::Demo;
 
 Wx::Demo - the wxPerl demo
 
+=head1 SYNOPSIS
+
+From the command prompt:
+
+    wxperl-demo.pl
+
 =head1 DESCRIPTION
 
 Every demo is a module in the Wx::DemoModules::* namespace.
