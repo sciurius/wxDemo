@@ -14,9 +14,9 @@ features that I need. PRs for other features are welcome.
 
 # INSTALLATION
 
-`    perl Makefile.PL`
-`    make`
-`    make test`
+`    perl Makefile.PL`  
+`    make`  
+`    make test`  
 `    make install` (optional)
 
 The demo program will be installed and executable with
