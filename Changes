@@ -4,6 +4,7 @@ Revision history for Perl application Wx::Demo.
 
     - Fix RT #66014: Document wxperl_demo.pl in Wx::Demo.
     - Improve initial sash positions and resizing.
+    - Some event and method renames for wxWidgets 3+.
 
 0.23  2024-10-12
 

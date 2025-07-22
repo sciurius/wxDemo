@@ -113,7 +113,7 @@ sub refresh_locale {
     
     my $menuindex = $top->GetMenuBar()->FindMenu($self->{menutitles}->{'Locale'});
     my $menulabel = t("&Locale");
-    $top->GetMenuBar()->SetLabelTop( $menuindex, $menulabel );
+    $top->GetMenuBar()->SetMenuLabel( $menuindex, $menulabel );
     $self->{menutitles}->{'Locale'} = $menulabel;
     
     
