@@ -68,8 +68,7 @@ sub new {
                        $_[1]->Skip;
                      } );
 
-  if ( $Wx::wxVERSION >= 3.001 ) {
-    Wx::Event::EVT_GRID_RANGE_SELECTED( $this, sub {
+  EVT_GRID_RANGE_SELECT( $this, sub {
                            Wx::LogMessage( "Range %sselect (%d, %d, %d, %d)",
                                            ( $_[1]->Selecting ? '' : 'de' ),
                                            $_[1]->GetLeftCol, $_[1]->GetTopRow,
@@ -78,18 +77,7 @@ sub new {
                            $_[0]->ShowSelections;
                            $_[1]->Skip;
                          } );
-  }
-  else {
-    EVT_GRID_RANGE_SELECT( $this, sub {
-                           Wx::LogMessage( "Range %sselect (%d, %d, %d, %d)",
-                                           ( $_[1]->Selecting ? '' : 'de' ),
-                                           $_[1]->GetLeftCol, $_[1]->GetTopRow,
-                                           $_[1]->GetRightCol,
-                                           $_[1]->GetBottomRow );
-                           $_[0]->ShowSelections;
-                           $_[1]->Skip;
-                         } );
-  }
+
   if( $events29plus ) {
       Wx::Event::EVT_GRID_CELL_CHANGED( $this, c_log_skip( "Cell content changed" ) );
   } else {
