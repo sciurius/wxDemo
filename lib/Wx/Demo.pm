@@ -99,7 +99,7 @@ use Module::Pluggable::Object;
 
 use Wx::Demo::Source;
 
-our $VERSION = '0.23';
+our $VERSION = '0.24';
 
 __PACKAGE__->mk_ro_accessors( qw(tree widget_tree events_tree source notebook left_notebook failwidgets) );
 __PACKAGE__->mk_accessors( qw(search_term ) );
@@ -205,7 +205,7 @@ sub new {
     $self->SetIcon( Wx::GetWxPerlIcon() );
     $self->Show;
 
-    Wx::LogMessage( "Welcome to wxPerl!" );
+    Wx::LogMessage( "Welcome to wxPerl $Wx::VERSION using xWidgets $Wx::wxVERSION" );
 
     return $self;
 }

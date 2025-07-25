@@ -562,7 +562,10 @@ sub populate_with_examples {
 	{
 		my $prop = $pg->Append(Wx::FileProperty->new('FileProperty', 'TextFile') );
 		$prop->SetAttribute(wxPG_FILE_WILDCARD,'Text Files (*.txt)|*.txt');
-		$prop->SetAttribute(wxPG_FILE_DIALOG_TITLE,'Custom File Dialog Title');
+		$prop->SetAttribute( $Wx::wxVERSION >= 3.002
+				     ? Wx::wxPG_DIALOG_TITLE()
+				     : Wx::wxPG_FILE_DIALOG_TITLE(),
+				     'Custom File Dialog Title');
 		$prop->SetAttribute(wxPG_FILE_SHOW_FULL_PATH,0);
 	}
 
@@ -658,8 +661,10 @@ sub populate_with_examples {
 	# String editor with dir selector button.
 	$pg->Append( Wx::DirProperty->new( 'DirProperty', 'DirProperty', Wx::StandardPaths::Get()->GetUserLocalDataDir ) );
 	$pg->SetPropertyAttribute( 'DirProperty',
-                              wxPG_DIR_DIALOG_MESSAGE,
-                              'This is a custom dir dialog message');
+				   $Wx::wxVERSION >= 3.002
+				   ? Wx::wxPG_DIALOG_TITLE()
+				   : Wx::wxPG_DIR_DIALOG_MESSAGE(),
+				   'This is a custom dir dialog message');
 
 	 # Add string property - first arg is label, second name
 	$pg->Append( Wx::StringProperty->new('StringProperty', 'StringProperty' ) );
